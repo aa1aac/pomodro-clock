@@ -8,12 +8,12 @@ body {
 }
 article{
     margin-top:1%; 
-    margin-bottom:2%;
+    margin-bottom:0;
 }
 #box{
     border-radius: 10px;
     border-style: inset;
-    padding: 10px;
+    padding: 5px;
     width:80%;
     background-color:white; 
 }
@@ -21,11 +21,11 @@ article{
     margin-bottom:10%;
 }
 .clock{
-    font-size:20px;
+    font-size:15px;
 }
 .sub{
     font-size:15px;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
 }
 .start{
     border-style: solid;
@@ -34,5 +34,12 @@ article{
     border-radius: 50%;
     margin-bottom: 10%;
     font-weight:bold;
-    border-color:blue;  
+    border-color:blue;
+    margin-top:1%;   
+}
+.subs{
+    font-size:15px;
+}
+.reset{
+    margin-bottom: 10px;
 }
