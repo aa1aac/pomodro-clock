@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
     <head>
-       
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
      <title>
@@ -9,100 +8,103 @@
      </title>
         <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="design/design.css">
-        
+
 
     </head>
     <body>
-        <article class="container">
+        <article>
             <div class="container text-center" id="box">
-           <h4 class="header">
-                Simple timer
-           </h4>
-            <div class="container">
+           <h1 class="header ">
+              POMODORO CLOCK
+           </h1>
+            <div class=""> 
+                <span>Session time</span>
+                <div class="row subs">
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addHour">
+                        +
+                    </span>
+                      <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addMin">
+                        +
+                    </span>
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addSec">
+                        +
+                    </span>
+                </div>
+                
             <div class="row clock">
-               <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
-                   0 : 
+               <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="hours">
+                   0 :
                </span> 
-               <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
-                   0 : 
+               <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="seconds">
+                   25 :
                </span>
-               <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
+               <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="minutes">
                    0
                </span>
             </div>
             <div class="row sub">
             <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
-             hours 
+                
+                <span class="subtractHour">-</span>
             </span>
             <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
-            minutes 
+               
+                <span class="subtractMinutes">-</span>
             </span>
             <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
-            seconds
+             <span class="subtractSecond">-</span>
              </span>
             </div>
+                    <span class="" id="reset">reset</span>
+                    <br>
+                 <span>break time</span>
+                
+                <br>
+                <div class="row subs" id="break">
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addBreakHour">
+                        +
+                    </span>
+                <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addBreakMin">
+                        +
+                    </span>
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addBreakSec">
+                        +
+                    </span>
+                </div>
+
+                <div class="row clock">
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="breakhours">
+                        0:
+                    </span>
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="breakseconds">
+                        5
+                    </span>
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="breakminutes">
+                        0
+                    </span>
+                </div>
+                <div class="row sub">
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
+                
+                        <span id="subHourBreak">-</span>
+                    </span>
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
+                        
+                        <span id="subtractMinutesBreak">-</span>
+                    </span>
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
+                        
+                        <span id="subSecondBreak">-</span>
+                    </span>
+                </div>
             <div class="start container">
-              <span>START</span>
+              <span class="inner">START</span>
             </div>
-            <div class="popular">
-              <h4>timers</h4>
-              <br>
-              <div clas="row">
-                <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="5">
-                  5
-                  
-                </span>
-                <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="10">
-                 10
-                 
-               </span>
-              <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="15">
-                15
-            
+        
               </span>
               
               </div>
-                <div clas="row sub">
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4 sub">
-                        min
-
-                    </span>
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4 sub">
-                        min
-
-                    </span>
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4 sub">
-                        min
-
-                    </span>
-
-                </div>
-                <div clas="row">
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="30">
-                        30
-
-                    </span>
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="1hr">
-                        1
-
-                    </span>
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4 ">
-                        2
-
-                    </span>
-                    <div clas="row sub">
-                        <span class="sub col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4 sub">
-                            min
-
-                        </span>
-                        <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4 sub">
-                            hour
-
-                        </span>
-                        <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4 sub">
-                            hour
-
-                        </span>
+         
 
                     </div>
                 </div>
