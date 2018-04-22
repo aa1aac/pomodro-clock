@@ -3,41 +3,40 @@ $(document).ready(function(){
    var sessionHour=parseInt(document.querySelector("#hours").textContent);
    var sessionMinute = parseInt(document.querySelector("#minutes").textContent);
    var sessionSecond = parseInt(document.querySelector("#seconds").textContent);
-    var breakHour = parseInt(document.querySelector("#breakhours").textContent);
-     var breakMinute = parseInt(document.querySelector("#breakminutes").textContent);
-      var breakSecond = parseInt(document.querySelector("#breakseconds").textContent);
       
   $("#addHour").click(function(){
    sessionHour=sessionHour+1;
-   $("#hours").html(sessionHour+":");
+   $("#hours").text(sessionHour+" :");
   })
-
-  $("#addMinute").click(function () {
-      sessionMinute = sessionMinute + 1;
-      $("#hours").html(sessionMinutes+":");
-  })
-
-
-  $("#addseconds").click(function () {
-      sessionSecond = sessionSecond + 1;
-      $("#hours").html(sessionSecond);
-  })
-
-
-  $("#addBreakHour").click(function () {
-      breakHour = breakHour + 1;
-      $("#breakHours").html(breakHour);
-  })
-
-
-  $("#addBreakMinute").click(function () {
-      breakMinute = breakMinute + 1;
-      $("#breakMinutes").html(breakMinute);
-  })
-
-  $("#addBreakSecond").click(function () {
-      breakSecond = breakSecond + 1;
-      $("#breakSeconds").html(breakSecond);
-  })
-
+   $("#addSec").click(function () {
+       sessionSecond +=1;
+       $("#seconds").text(sessionSecond);
+   })
+   $("#addMin").click(function () {
+       sessionMinute += 1;
+       $("#minutes").text(sessionMinute+" :");
+   })
+   
+   $(".subtractHour").click(function () {
+       sessionHour = sessionHour - 1;
+       if (sessionHour>=0){
+              $("#hours").text(sessionHour + " :");
+       }
+      else{sessionHour=0;}
+   })
+   $(".subtractSecond").click(function () {
+       sessionSecond -= 1;
+       if (sessionSecond>=0){
+           $("#seconds").text(sessionSecond);
+       }
+       else{sessionSecond=0;}
+   })
+   $(".subtractMinutes").click(function () {
+       sessionMinute -= 1;
+       if (sessionMinute>=0){
+          $("#minutes").text(sessionMinute + " :");
+       }
+       
+      else{ sessionMinute=0;}
+   })
 })
