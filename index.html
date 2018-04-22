@@ -11,7 +11,7 @@
 
 
     </head>
-    <body>
+    <body class="container">
         <article>
             <div class="container text-center" id="box">
            <h1 class="header ">
@@ -19,39 +19,31 @@
            </h1>
             <div class=""> 
                 <span>Session time</span>
-                <div class="row subs">
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addHour">
-                        +
-                    </span>
-                      <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addMin">
-                        +
-                    </span>
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addSec">
-                        +
-                    </span>
-                </div>
+               
                 
-            <div class="row clock">
-               <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="hours">
-                   0 :
-               </span> 
-               <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="minutes">
-                   25 :
+                                    <div class="clock">
+                        <div class="row subs">
+                            <span class="col-lg-6 col-md-4 col-md-6 col-sm-6 col-xs-6" id="addMin">
+                                +
+                            </span>
+                            <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6" id="addSec">
+                                +
+                            </span>
+                        </div>
+            <div class="row">
+               <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6" >
+                    min <span id="minutes">25 :</span> 
                </span>
-               <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="seconds">
-                   0
+               <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6">
+                  Sec <span id="seconds">0</span>
                </span>
             </div>
             <div class="row sub">
-            <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
-                
-                <span class="subtractHour">-</span>
-            </span>
-            <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
+            <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6">
                
                 <span class="subtractMinutes">-</span>
             </span>
-            <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
+            <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6">
              <span class="subtractSecond">-</span>
              </span>
             </div>
@@ -61,9 +53,6 @@
                 
                 <br>
                 <div class="row subs" id="break">
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addBreakHour">
-                        +
-                    </span>
                 <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="addBreakMin">
                         +
                     </span>
@@ -73,20 +62,15 @@
                 </div>
 
                 <div class="row clock">
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="breakhours">
-                        0:
-                    </span>
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="breakseconds">
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="breakminutes">
                         5
                     </span>
-                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="breakminutes">
+                    <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4" id="breakseconds">
                         0
                     </span>
                 </div>
                 <div class="row sub">
                     <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
-                
-                        <span id="subHourBreak">-</span>
                     </span>
                     <span class="col-lg-4 col-md-4 col-md-4 col-sm-4 col-xs-4">
                         
@@ -97,6 +81,7 @@
                         <span id="subSecondBreak">-</span>
                     </span>
                 </div>
+                    </div>
             <div class="start container">
               <span class="inner">START</span>
             </div>

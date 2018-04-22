@@ -1,13 +1,10 @@
 $(document).ready(function(){
   $("#reset").hide();
-   var sessionHour=parseInt(document.querySelector("#hours").textContent);
+
    var sessionMinute = parseInt(document.querySelector("#minutes").textContent);
    var sessionSecond = parseInt(document.querySelector("#seconds").textContent);
       
-  $("#addHour").click(function(){
-   sessionHour=sessionHour+1;
-   $("#hours").text(sessionHour+" :");
-  })
+
    $("#addSec").click(function () {
        sessionSecond +=1;
        $("#seconds").text(sessionSecond);
@@ -17,13 +14,6 @@ $(document).ready(function(){
        $("#minutes").text(sessionMinute+" :");
    })
    
-   $(".subtractHour").click(function () {
-       sessionHour = sessionHour - 1;
-       if (sessionHour>=0){
-              $("#hours").text(sessionHour + " :");
-       }
-      else{sessionHour=0;}
-   })
    $(".subtractSecond").click(function () {
        sessionSecond -= 1;
        if (sessionSecond>=0){
@@ -38,5 +28,25 @@ $(document).ready(function(){
        }
        
       else{ sessionMinute=0;}
+   })
+
+   $(".start").click(function(){
+       $(".start").hide();
+       $(".subtractSecond").hide();
+       $(".subtractMinutes").hide();
+       $("#addMin").hide();
+       $("#addSec").hide();
+       var m= parseInt(document.querySelector("#minutes").textContent);
+       var s = parseInt(document.querySelector("#seconds").textContent);
+      console.log(m,s);
+          var counter = setInterval(timer, 1000);
+      function timer(){
+         
+       m-=1;
+       if (m===0){
+           clearInterval(counter);
+       }
+       else{$("#minutes").text(m);}
+      }     
    })
 })
