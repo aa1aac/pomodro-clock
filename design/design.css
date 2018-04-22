@@ -4,7 +4,8 @@ body {
     font-family: 'Gaegu',
     cursive;
     font-size: 20px;
-    background-color: #223322;
+    border-style: inset;
+    height: 100%;
 }
 article{
     margin-top:1%; 
@@ -14,7 +15,7 @@ article{
     border-radius: 10px;
     border-style: inset;
     padding: 5px;
-    width:80%;
+    width:50%;
     background-color:white; 
 }
 .header{
