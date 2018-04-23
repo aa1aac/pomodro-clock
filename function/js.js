@@ -39,14 +39,33 @@ $(document).ready(function(){
        var m= parseInt(document.querySelector("#minutes").textContent);
        var s = parseInt(document.querySelector("#seconds").textContent);
       console.log(m,s);
-          var counter = setInterval(timer, 1000);
+          var counter1 = setInterval(timer, 1000);
+          var counter2 = setInterval(time, 6000);
       function timer(){
          
-       m-=1;
-       if (m===0){
-           clearInterval(counter);
+       s-=1;
+       if (s<0){
+           clearInterval(counter1);
        }
-       else{$("#minutes").text(m);}
-      }     
+       else{$("#seconds").text(s);}
+      }
+      
+      if (s===0){
+
+         function time() {
+
+             m -= 1;
+             if (m === 0) {
+                 clearInterval(counter2);
+             } else {
+                 $("#minutes").text(m);
+             }
+         }
+      }
+     
    })
+
+
+   
+   
 })
