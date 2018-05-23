@@ -3,7 +3,7 @@ $(document).ready(function(){
 
    var sessionMinute = parseInt(document.querySelector("#minutes").textContent);
    var sessionSecond = parseInt(document.querySelector("#seconds").textContent);
-      
+    var clockClass=document.querySelector(".clock");  
 
    $("#addSec").click(function () {
        sessionSecond +=1;
@@ -31,38 +31,32 @@ $(document).ready(function(){
    })
 
    $(".start").click(function(){
-       $(".start").hide();
-       $(".subtractSecond").hide();
-       $(".subtractMinutes").hide();
-       $("#addMin").hide();
-       $("#addSec").hide();
+       $(".start").fadeOut();
+       $(".subtractSecond").fadeOut();
+       $(".subtractMinutes").fadeOut();
+       $("#addMin").fadeOut();
+       $("#addSec").fadeOut();
+        clockClass.classList.toggle("large");
        var m= parseInt(document.querySelector("#minutes").textContent);
        var s = parseInt(document.querySelector("#seconds").textContent);
       console.log(m,s);
           var counter1 = setInterval(timer, 1000);
-          var counter2 = setInterval(time, 6000);
+       
       function timer(){
-         
-       s-=1;
-       if (s<0){
-           clearInterval(counter1);
-       }
-       else{$("#seconds").text(s);}
-      }
-      
-      if (s===0){
-
-         function time() {
-
-             m -= 1;
-             if (m === 0) {
-                 clearInterval(counter2);
-             } else {
-                 $("#minutes").text(m);
-             }
+           m-=1;
+           sec();
+           $("#minutes").text(m);
          }
-      }
-     
+       
+
+        function sec() {
+            s -= 1;
+            if (s < 0) {
+                clearInterval(counter1);
+            } else {
+                $("#seconds").text(s);
+            }
+        }
    })
 
 

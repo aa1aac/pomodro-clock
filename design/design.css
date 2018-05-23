@@ -7,16 +7,14 @@ body {
     font-family: 'Gaegu',
     cursive;
     font-size: 20px;
-    border-style: inset;
-   
+    border-style: solid;
+    height: 100%;
 }
 article{
     margin-top:1%; 
     margin-bottom:0.5%;
 }
 #box{
-    border-radius: 10px;
-    border-style: inset;
     padding: 5px;
     width:50%;
     background-color:white; 
@@ -47,4 +45,7 @@ article{
 .reset{
     margin-bottom: 10px;
     display: hide;
+}
+.large{
+font-size: 100px;
 }
