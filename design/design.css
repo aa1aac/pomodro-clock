@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'digital-clock-font';
-    src: url('/media/emerald/local disk(i)/projects/web/pomodro-clock/fonts/digital-7.ttf');
+    src: url('https://github.com/aa1aac/pomodro-clock/blob/master/fonts/digital-7.ttf');
 }
 body{
     font-family: 
