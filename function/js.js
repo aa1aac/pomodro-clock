@@ -1,62 +1,75 @@
 $(document).ready(function(){
   $("#reset").hide();
-
-   var sessionMinute = parseInt(document.querySelector("#minutes").textContent);
-   var sessionSecond = parseInt(document.querySelector("#seconds").textContent);
-    var clockClass=document.querySelector(".clock");  
-
+   var d =parseInt(document.querySelector("#days").textContent);
+   var h = parseInt(document.querySelector("#hours").textContent);
+   var m = parseInt(document.querySelector("#minutes").textContent);
+   var s = parseInt(document.querySelector("#seconds").textContent);
+   var clockClass=document.querySelector(".clock"); 
+    var clo = document.querySelector(".clo");  
+    $("#addDay").click(function () {
+        d += 1;
+        $("#days").text(d);
+    })
+    $("#addHrs").click(function () {
+        h += 1;
+        $("#hours").text(h);
+    })
    $("#addSec").click(function () {
-       sessionSecond +=1;
-       $("#seconds").text(sessionSecond);
+       s +=1;
+       $("#seconds").text(s);
    })
    $("#addMin").click(function () {
-       sessionMinute += 1;
-       $("#minutes").text(sessionMinute+" :");
+       m += 1;
+       $("#minutes").text(m);
    })
    
    $(".subtractSecond").click(function () {
-       sessionSecond -= 1;
-       if (sessionSecond>=0){
-           $("#seconds").text(sessionSecond);
+       s-= 1;
+       if (s>=0){
+           $("#seconds").text(s);
        }
-       else{sessionSecond=0;}
+       else{s=0;}
    })
-   $(".subtractMinutes").click(function () {
-       sessionMinute -= 1;
-       if (sessionMinute>=0){
-          $("#minutes").text(sessionMinute + " :");
+   $(".subtractMinute").click(function () {
+       m-= 1;
+       if (m>=0){
+          $("#minutes").text(m);
        }
        
-      else{ sessionMinute=0;}
+      else{ m=0;}
    })
+    $(".subtractHour").click(function () {
+        h -= 1;
+        if (h >= 0) {
+            $("#hours").text(h);
+        }
 
+        else { h = 0; }
+    })
+    $(".subtractDay").click(function () {
+        d -= 1;
+        if (d >= 0) {
+            $("#days").text(d);
+        }
+
+        else { d = 0; }
+    })
    $(".start").click(function(){
        $(".start").fadeOut();
-       $(".subtractSecond").fadeOut();
-       $(".subtractMinutes").fadeOut();
-       $("#addMin").fadeOut();
-       $("#addSec").fadeOut();
-        clockClass.classList.toggle("large");
+       $(".sub").fadeOut();
+       $(".caption").fadeOut();
+       $("body").css("background-color", "black");
+       $("body").css("color", "white");
+        clockClass.classList.toggle("clicked");
+       clo.classList.toggle("clicked");
        var m= parseInt(document.querySelector("#minutes").textContent);
        var s = parseInt(document.querySelector("#seconds").textContent);
-      console.log(m,s);
-          var counter1 = setInterval(timer, 1000);
-       
-      function timer(){
-           m-=1;
-           sec();
-           $("#minutes").text(m);
-         }
-       
-
-        function sec() {
-            s -= 1;
-            if (s < 0) {
-                clearInterval(counter1);
-            } else {
-                $("#seconds").text(s);
-            }
-        }
+       var h = parseInt(document.querySelector("#hours").textContent);
+       var d = parseInt(document.querySelector("#days").textContent);
+      function countDown(){
+          
+      }
+        
    })
 
 
