@@ -1,51 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Gaegu');
+@font-face {
+    font-family: 'digital-clock-font';
+    src: url('/media/emerald/local disk(i)/projects/web/pomodro-clock/fonts/digital-7.ttf');
+}
+body{
+    font-family: 
+    cursive,
+    Arial,
+    Helvetica,
+    sans-serif;
+   background-color: aliceblue; 
+}
+/*responsiveness*/
+@media (max-width: 650px) {
+   .clock{
+       font-size:50px;
+   }
+}
 
-html{
-    height: 100%;
+/*header*/
+header{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top:0px;
+    margin-bottom:5%;
 }
-body {
-    font-family: 'Gaegu',
-    cursive;
-    font-size: 20px;
-    border-style: solid;
-    height: 100%;
+table{
+  
+    margin:0 auto;
 }
-article{
-    margin-top:1%; 
-    margin-bottom:0.5%;
-}
-#box{
-    padding: 5px;
-    width:50%;
-    background-color:white; 
-}
-.header{
-    margin-bottom:10%;
+.caption{
+    text-align: center;  
 }
 .clock{
-    font-size:15px;
-}
-.sub{
-    font-size:15px;
-    margin-bottom: 5%;
+    font-family: digital-clock-font;
+    font-size: 150px;
+    text-align: center;
 }
 .start{
+    text-align: center;
+    margin-top:5%;
+}
+/*when clicked*/
+.clicked{
+    padding-top:50%;
+    transition:all 1s 1s cubic-bezier(.15, .68, .78, .32);
+    
+}
+.border{
     border-style: solid;
-    width:35%;
-    padding: 10% 5%;
-    border-radius: 50%;
-    margin-bottom: 10%;
-    font-weight:bold;
-    border-color:blue;
-    margin-top:1%;   
+    border-radius: 5px;
+    -webkit-box-shadow: -34px 31px 36px 17px rgba(156, 137, 156, 0.79);
+    -moz-box-shadow: -34px 31px 36px 17px rgba(156, 137, 156, 0.79);
+    box-shadow: -34px 31px 36px 17px rgba(156, 137, 156, 0.79);
 }
-.subs{
-    font-size:15px;
+.sub{
+    text-align: center;
 }
-.reset{
-    margin-bottom: 10px;
-    display: hide;
-}
-.large{
-font-size: 100px;
+.info{
+    text-align: center;
 }

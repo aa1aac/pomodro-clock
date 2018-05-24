@@ -8,66 +8,81 @@
      </title>
         <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="design/design.css">
-
+        
 
     </head>
     <body class="container">
-        <article>
-            <div class="container text-center" id="box">
-           <h1 class="header ">
-              POMODORO CLOCK
-           </h1>
-            <div class=""> 
-                <span>Session time</span>
-               
-                
-                                    <div class="clock">
-                        <div class="row subs">
-                            <span class="col-lg-6 col-md-4 col-md-6 col-sm-6 col-xs-6" id="addMin">
-                                +
-                            </span>
-                            <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6" id="addSec">
-                                +
-                            </span>
-                        </div>
-            <div class="row">
-               <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6" >
-                    min: <span id="minutes">25 :</span> 
-               </span>
-               <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6">
-                  Sec :<span id="seconds">0</span>
-               </span>
-            </div>
-            <div class="row sub">
-            <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6">
-               
-                <span class="subtractMinutes">-</span>
-            </span>
-            <span class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6">
-             <span class="subtractSecond">-</span>
-             </span>
-            </div>
-                    <span class="" id="reset">reset</span>
-                    <br>
-                
-                    </div>
-            <div class="start container">
-              <span class="inner">START</span>
-            </div>
-        
-              </span>
-              
-              </div>
-         
-
-                    </div>
+            <header><h1>count down timer</h1></header> 
+            <table class="container border">
+                <tr class="caption">
+                    <td colspan="4" class="container">
+                        <h3>session time</h3>
+                    </td>
+                </tr>
+                <tr class="sub">
+                     <td id="addDay">
+                         +
+                     </td>
+                     <td id="addHrs">
+                         +
+                     </td>
+                     <td id="addMin">
+                         +
+                     </td>
+                     <td id="addSec">
+                         +
+                     </td>
+                </tr>
+                <tr class="clock">
+                    <td id="days">
+                        0
+                    </td>
+                    <td id="hours">
+                     0
+                    </td>
+                    <td id="minutes">
+                     0
+                    </td>
+                    <td id="seconds">
+                     0
+                    </td>
+                </tr>
+                <tr class="sub">
+                    <td class="subtractDay">
+                        -
+                    </td>
+                    <td class="subtractHour">
+                        -
+                    </td>
+                    <td class="subtractMinute">
+                        -
+                    </td>
+                    <td class="subtractSecond">
+                        -
+                    </td>
+                </tr>
+                <tr class="info clo">
+                    <td>
+                        days
+                    </td>
+                    <td>
+                        hours
+                    </td>
+                    <td>
+                        minutes
+                    </td>
+                    <td>
+                        seconds
+                    </td>
+                </tr>
+            </table>
+            <div class="buttons">
+                <div class="start">
+                    START
                 </div>
+            
             </div>
-            </div>
-
-            </div>
-        </article>
-        
+            
         <script src="libs/jquery-3.3.1.min.js"></script>
         <script src="libs/bootstrap/js/bootstrap.js"></script>
         <script src="function/js.js"></script>
