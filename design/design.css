@@ -8,7 +8,8 @@ body{
     cursive,
     Arial,
     Helvetica,
-    sans-serif;
+    sans-serif,
+        digital-clock-font;
    background-color: aliceblue; 
 }
 /*header*/
