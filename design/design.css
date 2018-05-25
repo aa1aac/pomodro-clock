@@ -1,7 +1,9 @@
+/*font*/
 @font-face {
     font-family: 'digital-clock-font';
     src: url('/media/emerald/local disk(i)/projects/web/pomodro-clock/fonts/digital-7.ttf');
 }
+
 body{
     font-family: 
     cursive,
@@ -10,6 +12,55 @@ body{
     sans-serif;
    background-color: aliceblue; 
 }
+/*header*/
+
+header {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 5%;
+}
+
+table {
+    margin: 0 auto;
+}
+td {
+    width: 25%;
+}
+.border {
+    border-style: solid;
+    border-radius: 5px;
+    -webkit-box-shadow: -34px 31px 36px 17px rgba(156, 137, 156, 0.79);
+    -moz-box-shadow: -34px 31px 36px 17px rgba(156, 137, 156, 0.79);
+    box-shadow: -34px 31px 36px 17px rgba(156, 137, 156, 0.79);
+}
+.caption {
+    text-align: center;
+}
+
+.clock {
+    font-family: digital-clock-font;
+    font-size: 150px;
+    text-align: center;
+}
+.sub {
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+.start {
+    text-align: center;
+    margin-top: 5%;
+}
+.reset {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
 /*responsiveness*/
 @media (max-width: 650px) {
    .clock{
@@ -17,45 +68,16 @@ body{
    }
 }
 
-/*header*/
-header{
-    text-align: center;
-    text-transform: uppercase;
-    margin-top:0px;
-    margin-bottom:5%;
-}
-table{
-  
-    margin:0 auto;
-}
-.caption{
-    text-align: center;  
-}
-.clock{
-    font-family: digital-clock-font;
-    font-size: 150px;
-    text-align: center;
-}
-.start{
-    text-align: center;
-    margin-top:5%;
-}
+
+
+
 /*when clicked*/
 .clicked{
     padding-top:50%;
     transition:all 1s 1s cubic-bezier(.15, .68, .78, .32);
     
 }
-.border{
-    border-style: solid;
-    border-radius: 5px;
-    -webkit-box-shadow: -34px 31px 36px 17px rgba(156, 137, 156, 0.79);
-    -moz-box-shadow: -34px 31px 36px 17px rgba(156, 137, 156, 0.79);
-    box-shadow: -34px 31px 36px 17px rgba(156, 137, 156, 0.79);
-}
-.sub{
-    text-align: center;
-}
-.info{
-    text-align: center;
-}
+
+
+
+
